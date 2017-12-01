@@ -1,6 +1,6 @@
 ---
 
-- name: "use ceph-volume to create osd: {{ item | to_nice_yaml }}"
+- name: "use ceph-volume to create osd: {{ item.data }}"
   ceph_volume:
     cluster: "{{ cluster }}"
     objectstore: "{{ osd_objectstore }}"
